@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+   mysql_db:
+      image: mysql:5.7
+      volumes:
+         - mysql_storage:/var/lib/mysql
+      restart: always
+      environment:
+         MYSQL_ROOT_PASSWORD: rootsecure
+         MYSQL_USER: alpha
+         MYSQL_PASSWORD: alphasecure
+         MYSQL_DATABASE: wpdb
+         
+   wpos:
+      image: wordpress:5.1.1-php7.3-apache
+      volumes:
+         - wp_storage:/var/www/html
+      restart: always
+      depends_on:
+         - mysql_db
+      ports:
+         - 8081:80
+      environment:
+         WORDPRESS_DB_HOST: mysql_db
+         WORDPRESS_DB_USER: alpha
+         WORDPRESS_DB_PASSWORD: alphasecure
+         WORDPRESS_DB_NAME: wpdb
+
+volumes:
+   mysql_storage:
+   wp_storage:
+            

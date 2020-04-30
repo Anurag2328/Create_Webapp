@@ -5,6 +5,9 @@ Use this repository to:-
 3. Complete setup of **_MYSQL_** database.
 4. Get your own **_wordpress_** site.
 
+# About
+This is a project, built mainly in **docker** that creates a **wordpress blogging site** by executing just a file.
+
 # Technology used
 * Linux
 * Docker
@@ -69,5 +72,3 @@ docker-compose start
 
 # Author 
 [Anurag Vashishth](https://github.com/Anurag2328)
-
-

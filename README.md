@@ -6,7 +6,7 @@ Use this repository to:-
 4. Get your own **_wordpress_** site.
 
 # About
-This is a project, built mainly in **docker** that creates a **wordpress blogging site** by executing just a file.
+This project is built mainly in **docker** that creates a **wordpress blogging site**.
 
 # Technology used
 * Linux
